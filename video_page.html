@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Direct MP4 Video Player</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin: 20px; }
+    video { width: 80%; max-width: 800px; margin-top: 20px; }
+    input[type="text"] { width: 60%; padding: 8px; }
+    button { padding: 8px 15px; }
+  </style>
+</head>
+<body>
+
+<h2>Direct MP4 Video Player</h2>
+<input type="text" id="videoLink" placeholder="Enter video URL here">
+<button onclick="playVideo()">Play</button>
+
+<br>
+<video id="videoPlayer" controls></video>
+
+<script>
+function playVideo() {
+  const link = document.getElementById("videoLink").value.trim();
+  const player = document.getElementById("videoPlayer");
+
+  player.src = link;
+  player.play();
+}
+</script>
+
+</body>
+</html>
